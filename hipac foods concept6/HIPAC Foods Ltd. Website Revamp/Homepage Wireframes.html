@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HIPAC Foods — Homepage Wireframes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Patrick+Hand&family=Kalam:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1d1c1a;
+    --paper:#f5f1e8;
+    --mute:#8a857a;
+    --line:#1d1c1a;
+    /* palette slots — swapped by .pal-* on <body> */
+    --c-tomato:#d8482b;
+    --c-green:#2f7a4f;
+    --c-mustard:#e8b53a;
+    --c-ocean:#2a5b88;
+    --c-cream:#efe7d0;
+    --accent:var(--c-tomato);
+    --accent-2:var(--c-green);
+    --accent-3:var(--c-mustard);
+    --accent-4:var(--c-ocean);
+    /* fidelity knobs */
+    --fid-shadow: 6px 6px 0 var(--ink);
+    --fid-border-style: solid;
+    --fid-wobble: 1;
+    --fid-anno-rotate: 1;
+    --fid-font-head: "Caveat", cursive;
+    --fid-font-body: "Patrick Hand", sans-serif;
+    --fid-font-meta: "Kalam", sans-serif;
+  }
+  body.pal-sea{
+    --c-tomato:#2a8ba8; --c-green:#1f5d6b; --c-mustard:#6ec5d4; --c-ocean:#2a3f5c; --c-cream:#e0ecef;
+  }
+  body.pal-spice{
+    --c-tomato:#b03a1a; --c-green:#5e2e1a; --c-mustard:#d99d3a; --c-ocean:#7a3a1a; --c-cream:#efe2c8;
+  }
+  body.pal-cane{
+    --c-tomato:#3a7d44; --c-green:#1f4d2a; --c-mustard:#c9a227; --c-ocean:#5a8c3d; --c-cream:#ece5c8;
+  }
+  html,body{background:#e9e3d4;color:var(--ink);font-family:"Patrick Hand", "Kalam", sans-serif;margin:0;}
+  /* ============ WIREFRAME LANGUAGE ============ */
+  .wf{
+    --ink:#1d1c1a;
+    background:var(--paper);
+    color:var(--ink);
+    width:1100px;
+    border:2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    font-family:"Patrick Hand", sans-serif;
+    overflow:hidden;
+  }
+  .wf .label{font-family:"Kalam";font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);opacity:.7;}
+  .wf h1, .wf h2, .wf h3, .wf p, .wf span, .wf div{font-family:inherit;}
+  .wf .h1{font-family:"Caveat";font-weight:700;font-size:52px;line-height:1;}
+  .wf .h2{font-family:"Caveat";font-weight:700;font-size:34px;line-height:1.05;}
+  .wf .h3{font-family:"Kalam";font-weight:700;font-size:20px;}
+  .wf .body{font-family:"Patrick Hand";font-size:16px;line-height:1.35;}
+  .wf .tiny{font-family:"Kalam";font-size:12px;opacity:.65;}
+  .wf .anno{
+    font-family:"Caveat";color:var(--accent);font-size:20px;
+    transform:rotate(-3deg);display:inline-block;
+  }
+  .wf .anno-2{font-family:"Caveat";color:var(--accent-4);font-size:18px;transform:rotate(2deg);display:inline-block;}
+  .wf .arrow{stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;}
+  .wf .box{border:1.8px solid var(--ink);position:relative;}
+  .wf .ghost{
+    background:
+      repeating-linear-gradient(135deg, transparent 0 9px, rgba(29,28,26,.10) 9px 10px);
+    border:1.8px solid var(--ink);
+    position:relative;
+  }
+  .wf .ghost::after{
+    content:attr(data-label);
+    position:absolute; inset:0;
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Kalam"; font-size:13px; letter-spacing:.06em;
+    color:var(--ink); opacity:.75; text-transform:uppercase;
+    text-align:center; padding:8px;
+  }
+  .wf .video-ph{
+    background:#1d1c1a; color:#f5f1e8;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .wf .video-ph::before{
+    content:"▶";font-size:42px;opacity:.85;
+  }
+  .wf .video-ph::after{
+    content:attr(data-label);
+    position:absolute; bottom:10px; left:14px;
+    font-family:"Kalam"; font-size:12px; letter-spacing:.05em; opacity:.7;
+    text-transform:uppercase;
+  }
+  .wf .product{
+    background:#fff; border:1.8px solid var(--ink);
+    display:flex;align-items:flex-end;justify-content:center;
+    position:relative;
+    padding:10px;
+  }
+  .wf .product .blob{
+    width:78%; aspect-ratio:1;
+    background: radial-gradient(circle at 35% 30%, #e8b53a, #d8482b 70%, #8b2a18);
+    border-radius:46% 54% 38% 62% / 60% 40% 60% 40%;
+    border:1.5px solid var(--ink);
+  }
+  .wf .product.veg .blob{background: radial-gradient(circle at 35% 30%, #b9d18a, #2f7a4f 70%, #1a4329);}
+  .wf .product.fish .blob{background: radial-gradient(circle at 35% 30%, #aed6e8, #2a5b88 70%, #16395c);}
+  .wf .product.can .blob{
+    background: linear-gradient(180deg,#cfcab6 0 18%, #d8482b 18% 82%, #cfcab6 82% 100%);
+    border-radius: 14px;
+  }
+  .wf .product .name{
+    position:absolute; top:8px; left:10px; font-family:"Kalam"; font-size:11px; opacity:.7;
+    text-transform:uppercase; letter-spacing:.04em;
+  }
+  .wf .chip{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:4px 10px; border:1.8px solid var(--ink); border-radius:999px;
+    font-family:"Kalam"; font-size:13px;
+  }
+  .wf .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:8px 16px; border:2px solid var(--ink);
+    font-family:"Kalam"; font-weight:700; font-size:14px;
+    background:transparent; cursor:default;
+  }
+  .wf .btn.fill{background:var(--ink); color:var(--paper);}
+  .wf .underline-wob{position:relative;}
+  .wf .underline-wob::after{
+    content:"";position:absolute;left:0;right:0;bottom:-4px;height:6px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'><path d='M0 3 Q 10 0 20 3 T 40 3 T 60 3 T 80 3 T 100 3' fill='none' stroke='%23d8482b' stroke-width='2'/></svg>") repeat-x;
+  }
+  /* nav */
+  .wf .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 28px; border-bottom:1.8px solid var(--ink);
+  }
+  .wf .nav .logo{font-family:"Caveat";font-weight:700;font-size:28px;letter-spacing:.02em;}
+  .wf .nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;font-family:"Kalam";font-size:15px;}
+  .wf .nav .util{display:flex;gap:14px;align-items:center;font-family:"Kalam";font-size:14px;}
+  /* footer */
+  .wf .footer{
+    background:#1d1c1a;color:#f5f1e8;padding:28px 28px 22px;
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:22px;
+    border-top:1.8px solid var(--ink);
+  }
+  .wf .footer .h3{font-family:"Caveat";font-size:24px;color:#f5f1e8;margin:0 0 6px;}
+  .wf .footer ul{list-style:none;margin:0;padding:0;font-family:"Kalam";font-size:13px;line-height:1.7;opacity:.85;}
+
+  /* dashed dividers for sections */
+  .wf hr.dash{
+    border:0;border-top:1.6px dashed var(--ink);opacity:.4;margin:0;
+  }
+
+  /* tickertape */
+  .wf .ticker{
+    background:var(--ink); color:var(--paper);
+    padding:10px 0; overflow:hidden; white-space:nowrap;
+    font-family:"Kalam"; font-size:14px; letter-spacing:.18em; text-transform:uppercase;
+  }
+
+  /* sticky pop-up survey */
+  .wf .survey-popup{
+    position:absolute; right:18px; bottom:18px; width:240px;
+    background:#fff; border:1.8px solid var(--ink); padding:12px;
+    box-shadow:4px 4px 0 var(--ink);
+  }
+
+  /* horizontal scroll rail */
+  .wf .rail{
+    display:flex;gap:14px; padding:10px 28px;
+    overflow:hidden; position:relative;
+  }
+  .wf .rail::before, .wf .rail::after{
+    content:""; position:absolute; top:0; bottom:0; width:40px; pointer-events:none;
+  }
+  .wf .rail::before{left:0; background:linear-gradient(90deg,var(--paper),transparent);}
+  .wf .rail::after{right:0; background:linear-gradient(270deg,var(--paper),transparent);}
+
+  /* viewport hint badges */
+  .vp-badge{
+    position:absolute;top:-14px;left:18px;
+    background:var(--paper);border:1.8px solid var(--ink);
+    padding:2px 10px;
+    font-family:"Kalam";font-size:12px;font-weight:700;
+  }
+  /* color blocks */
+  .blk-green{background:var(--c-green);color:#f5f1e8;}
+  .blk-tomato{background:var(--c-tomato);color:#f5f1e8;}
+  .blk-mustard{background:var(--c-mustard);color:#1d1c1a;}
+  .blk-ocean{background:var(--c-ocean);color:#f5f1e8;}
+  .blk-cream{background:var(--c-cream);color:#1d1c1a;}
+
+  /* ============ FIDELITY MODES ============ */
+  /* loose = the most hand-drawn; structured = clean wireframe */
+  body.fid-loose .wf{
+    box-shadow: 10px 10px 0 var(--ink);
+  }
+  body.fid-loose .wf .h1{font-family:"Caveat", cursive;}
+  body.fid-loose .wf .h2{font-family:"Caveat", cursive;}
+
+  /* default "sketchy" — what's already defined */
+
+  body.fid-structured .wf{
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    border-width: 1px;
+  }
+  body.fid-structured .wf .h1{font-family:"Inter", system-ui, sans-serif !important; font-weight:700; letter-spacing:-0.02em;}
+  body.fid-structured .wf .h2{font-family:"Inter", system-ui, sans-serif !important; font-weight:700; letter-spacing:-0.015em;}
+  body.fid-structured .wf .h3{font-family:"Inter", system-ui, sans-serif !important; font-weight:600;}
+  body.fid-structured .wf .body{font-family:"Inter", system-ui, sans-serif !important; font-weight:400;}
+  body.fid-structured .wf .tiny{font-family:"Inter", system-ui, sans-serif !important; font-weight:500;}
+  body.fid-structured .wf .label{font-family:"Inter", system-ui, sans-serif !important; font-weight:600;}
+  body.fid-structured .wf .nav .logo{font-family:"Inter", system-ui, sans-serif !important; font-weight:800; letter-spacing:-.02em;}
+  body.fid-structured .wf .nav ul{font-family:"Inter", system-ui, sans-serif !important;}
+  body.fid-structured .wf .nav .util{font-family:"Inter", system-ui, sans-serif !important;}
+  body.fid-structured .wf .chip{font-family:"Inter", system-ui, sans-serif !important; font-weight:500;}
+  body.fid-structured .wf .btn{font-family:"Inter", system-ui, sans-serif !important; font-weight:600;}
+  body.fid-structured .wf .footer .h3{font-family:"Inter", system-ui, sans-serif !important; font-weight:700;}
+  body.fid-structured .wf .footer ul{font-family:"Inter", system-ui, sans-serif !important;}
+  body.fid-structured .wf .box,
+  body.fid-structured .wf .ghost,
+  body.fid-structured .wf .product{ border-width: 1px; }
+  body.fid-structured .wf .underline-wob::after{ background: var(--accent); height:3px; }
+  body.fid-structured .wf-anno{ transform: rotate(0deg) !important; font-family:"Inter", system-ui, sans-serif !important; font-weight:600; font-size:13px !important; }
+  body.fid-structured .notes{ font-family:"Inter", system-ui, sans-serif; box-shadow: 0 8px 24px rgba(0,0,0,.08); border-style: solid; border-width:1px;}
+  body.fid-structured .notes h2{ font-family:"Inter", system-ui, sans-serif; font-weight:800; letter-spacing:-.02em;}
+  body.fid-structured .notes h3{ font-family:"Inter", system-ui, sans-serif; font-weight:600;}
+
+  /* ============ ANNOTATIONS TOGGLE ============ */
+  body.anno-off .wf-anno{ display:none !important; }
+  body.anno-off .vp-badge{ display:none !important; }
+
+  /* notes column at start */
+  .notes{
+    width:520px;background:#fffdf4;border:2px dashed var(--ink);padding:22px 24px;
+    font-family:"Patrick Hand";font-size:16px;line-height:1.45;
+    box-shadow:6px 6px 0 var(--ink);
+  }
+  .notes h2{font-family:"Caveat";font-weight:700;font-size:36px;margin:0 0 4px;}
+  .notes h3{font-family:"Kalam";font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:18px 0 6px;}
+  .notes ul{margin:0;padding-left:20px;}
+
+  /* tweaks for direction palette */
+  .tweaks-tip{
+    position:fixed;left:14px;bottom:14px;z-index:50;
+    background:var(--paper);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);
+    padding:10px 12px;font-family:"Kalam";font-size:13px;max-width:260px;line-height:1.35;
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script>
+window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "fidelity": "sketchy",
+  "palette": "sunset",
+  "annotations": true
+}/*EDITMODE-END*/;
+</script>
+<script type="text/babel" src="wireframe-bits.jsx"></script>
+<script type="text/babel" src="direction-a.jsx"></script>
+<script type="text/babel" src="direction-b.jsx"></script>
+<script type="text/babel" src="direction-c.jsx"></script>
+<script type="text/babel" src="direction-d.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>

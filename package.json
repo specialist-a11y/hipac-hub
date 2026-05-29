@@ -1,0 +1,9 @@
+{
+  "name": "hipac-hub-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root workspace of HIPAC Design Proposal Monorepo",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

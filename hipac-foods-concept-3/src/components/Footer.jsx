@@ -50,7 +50,7 @@ export default function Footer() {
           <div className="footer-col-1">
             <a href="#" className="logo-link">
               <img 
-                src="/logo.png" 
+                src="./logo.png" 
                 alt="HIPAC Limited Logo" 
                 className="logo-image" 
               />

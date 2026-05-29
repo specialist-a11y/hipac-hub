@@ -53,7 +53,7 @@ export default function Hero({ onBrandSelect }) {
       <nav className={`nav-c5 ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-c5-inner">
           <a href="#">
-            <img src="/logo.png" alt="HIPAC Foods" className="nav-logo-img" />
+            <img src="./logo.png" alt="HIPAC Foods" className="nav-logo-img" />
           </a>
           <div className="nav-links-c5">
             {NAV_LINKS.map(([label, href]) => (
@@ -84,9 +84,9 @@ export default function Hero({ onBrandSelect }) {
         <video
           className="hero-c5-bg-vid"
           autoPlay muted loop playsInline
-          poster="/hero.png"
+          poster="./hero.png"
         >
-          <source src="/make_the_hamburger_move_202605262153.mp4" type="video/mp4" />
+          <source src="./make_the_hamburger_move_202605262153.mp4" type="video/mp4" />
         </video>
 
         {/* Split color overlays — video shows through both tints */}

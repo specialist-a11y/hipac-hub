@@ -4,21 +4,21 @@ import { Menu, X, ArrowRight, Phone } from 'lucide-react';
 const SLIDES = [
   {
     tag: "FARMER'S CHOICE",
-    logo: '/farmers-choice-logo.png',
+    logo: './farmers-choice-logo.png',
     line1: 'Premium',
     line2: 'Caribbean Meats',
     desc: "Crafted with over 40 years of Barbadian heritage, seasoned with the perfect blend of local herbs and spices for true Caribbean flavour.",
   },
   {
     tag: 'FAMILY CHOICE',
-    logo: '/family-choice-logo.png',
+    logo: './family-choice-logo.png',
     line1: 'Hearty',
     line2: 'Luncheon Meats',
     desc: "Convenient, delicious, and seasoned to perfection. Our canned meats bring families together across the Caribbean for generations.",
   },
   {
     tag: 'BAR PAC',
-    logo: '/bar-pac-logo.png',
+    logo: './bar-pac-logo.png',
     line1: 'Holiday',
     line2: 'Bone-In Hams',
     desc: "The centrepiece of every Caribbean holiday. Slow-smoked, tender bone-in hams that deliver the authentic taste of celebration.",
@@ -74,7 +74,7 @@ export default function Hero({ onBrandSelect }) {
       <nav className={`nav-v2 ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-v2-inner">
           <a href="#">
-            <img src="/logo.png" alt="HIPAC Limited" className="nav-logo-img" />
+            <img src="./logo.png" alt="HIPAC Limited" className="nav-logo-img" />
           </a>
 
           <div className="nav-links-v2">
@@ -120,8 +120,8 @@ export default function Hero({ onBrandSelect }) {
       <div className="hero-v2">
         {/* Left: video panel */}
         <div className="hero-video-panel">
-          <video className="hero-vid" autoPlay muted loop playsInline poster="/hero.png">
-            <source src="/hero-video.mp4" type="video/mp4" />
+          <video className="hero-vid" autoPlay muted loop playsInline poster="./hero.png">
+            <source src="./hero-video.mp4" type="video/mp4" />
           </video>
           <div className="hero-vid-veil" />
         </div>

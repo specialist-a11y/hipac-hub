@@ -5,7 +5,7 @@ const FEATURED = {
   badge: 'Featured Product',
   seasonal: 'Holiday Season',
   brand: 'Bar Pac',
-  logo: '/bar-pac-logo.png',
+  logo: './bar-pac-logo.png',
   name: 'Bone-In Picnic Ham',
   tagline: 'The Centrepiece of Every Caribbean Celebration',
   desc: 'Slow-smoked over real hardwood with a signature sweet clove cure, our Bar Pac Bone-In Picnic Ham has graced Caribbean tables for generations. Rich, tender, and unmistakably festive — this is the taste of home.',

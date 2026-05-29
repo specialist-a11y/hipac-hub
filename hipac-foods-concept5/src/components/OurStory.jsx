@@ -62,8 +62,8 @@ export default function OurStory() {
               <video
                 ref={videoRef}
                 className="story-video-el"
-                src="/story-video.mp4"
-                poster="/hero.png"
+                src="./story-video.mp4"
+                poster="./hero.png"
                 playsInline
                 loop
               />

@@ -10,12 +10,12 @@ const BRANDS = [
       "Our legendary hickory-smoked sliced bacon is seasoned with local spices and cured to absolute perfection. Crispy, savoury, and unmistakably Barbadian.",
     features: ['Naturally Hickory Smoked', 'Unique Local Spice Cure', 'Gluten & Soy Free'],
     emoji: '🥓',
-    logo: '/farmers-choice-logo.png',
+    logo: './farmers-choice-logo.png',
     dimensions: { width: 440, height: 270, depth: 16 },
     useImageFront: true,
-    imageFront: '/bacon-package.png',
+    imageFront: './bacon-package.png',
     useImageBack: true,
-    imageBack: '/bacon-package-back.png',
+    imageBack: './bacon-package-back.png',
     boxColors: {
       front: 'transparent',
       back: 'linear-gradient(135deg, #0c5a2f, #083c1f)',
@@ -33,7 +33,7 @@ const BRANDS = [
       "A beloved household staple packed with rich, savoury protein and spiced with select hot peppers. Ideal for fried breakfast slices, sandwiches, and quick dinners.",
     features: ['Spicy & Smoked Options', 'Fully Prepared & Canned', 'Halal Certified Available'],
     emoji: '🥫',
-    logo: '/family-choice-logo.png',
+    logo: './family-choice-logo.png',
     dimensions: { width: 190, height: 250, depth: 130 },
     useImageFront: false,
     boxColors: {
@@ -53,7 +53,7 @@ const BRANDS = [
       "The pride of Bajan holiday feasts. Slow-smoked bone-in picnic hams cured with a signature sweet clove glaze that melts in your mouth with every slice.",
     features: ['Premium Bone-In Picnic Ham', 'Sweet Clove Cure', 'Centrepiece Quality'],
     emoji: '🍖',
-    logo: '/bar-pac-logo.png',
+    logo: './bar-pac-logo.png',
     dimensions: { width: 230, height: 240, depth: 180 },
     useImageFront: false,
     boxColors: {

@@ -21,9 +21,9 @@ export default function Hero({ onBrandSelect, activeTheme, onThemeSelect }) {
         depth: 16
       },
       useImageFront: true,
-      imageFront: "/bacon-package.png",
+      imageFront: "./bacon-package.png",
       useImageBack: true,
-      imageBack: "/bacon-package-back.png",
+      imageBack: "./bacon-package-back.png",
       boxColors: {
         front: "transparent",
         back: "linear-gradient(135deg, #0c5a2f, #083c1f)",
@@ -210,7 +210,7 @@ export default function Hero({ onBrandSelect, activeTheme, onThemeSelect }) {
         <div className="container nav-container">
           <a href="#" className="logo-link group">
             <img 
-              src="/logo.png" 
+              src="./logo.png" 
               alt="HIPAC Limited Logo" 
               className="logo-image" 
             />

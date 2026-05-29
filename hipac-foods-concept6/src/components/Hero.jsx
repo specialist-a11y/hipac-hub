@@ -13,17 +13,17 @@ const NAV_LINKS = [
 
 const BUBBLES = [
   {
-    img: '/farmers-choice-logo.png',
+    img: './farmers-choice-logo.png',
     label: "Farmer's Choice", size: 110, logo: true,
     pos: { top: '12%', right: '5%' }, delay: 0,
   },
   {
-    img: '/family-choice-logo.png',
+    img: './family-choice-logo.png',
     label: 'Family Choice', size: 96, logo: true,
     pos: { top: '44%', right: '2%' }, delay: 0.65,
   },
   {
-    img: '/bar-pac-logo.png',
+    img: './bar-pac-logo.png',
     label: 'Bar Pac', size: 102, logo: true,
     pos: { bottom: '18%', right: '10%' }, delay: 1.2,
   },
@@ -44,7 +44,7 @@ export default function Hero({ onBrandSelect }) {
       <nav className={`nav-c5 ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-c5-inner">
           <a href="#">
-            <img src="/logo.png" alt="HIPAC Foods" className="nav-logo-img" />
+            <img src="./logo.png" alt="HIPAC Foods" className="nav-logo-img" />
           </a>
           <div className="nav-links-c5">
             {NAV_LINKS.map(([label, href]) => (
@@ -75,9 +75,9 @@ export default function Hero({ onBrandSelect }) {
         <video
           className="hero-c5-bg-vid"
           autoPlay muted loop playsInline
-          poster="/hero.png"
+          poster="./hero.png"
         >
-          <source src="/Add_nuggets_to_hamburger_202605262322.mp4" type="video/mp4" />
+          <source src="./Add_nuggets_to_hamburger_202605262322.mp4" type="video/mp4" />
         </video>
 
         {/* Split color overlays — video shows through both tints */}

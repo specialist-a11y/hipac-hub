@@ -73,7 +73,7 @@ export default function Hero({ onBrandSelect, activeTheme, onThemeSelect }) {
       <div className="hero-bg-media">
         <video
           ref={videoRef}
-          src="/hipac-hero-video.mp4"
+          src="./hipac-hero-video.mp4"
           autoPlay
           loop
           muted
@@ -107,7 +107,7 @@ export default function Hero({ onBrandSelect, activeTheme, onThemeSelect }) {
         <div className="container nav-container">
           <a href="#" className="logo-link group">
             <img 
-              src="/logo.png" 
+              src="./logo.png" 
               alt="HIPAC Limited Logo" 
               className="logo-image" 
             />

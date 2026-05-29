@@ -45,7 +45,7 @@ export default function Footer() {
             {/* Brand column */}
             <div className="footer-brand-col">
               <a href="#">
-                <img src="/logo.png" alt="HIPAC Limited" className="footer-logo-v2" />
+                <img src="./logo.png" alt="HIPAC Limited" className="footer-logo-v2" />
               </a>
               <p className="footer-tagline">
                 Nothing Less Than The Best. Caribbean-made meats crafted with over 45 years of

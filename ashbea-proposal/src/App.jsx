@@ -7,7 +7,7 @@ const CONCEPTS = [
     label: 'Concept A',
     name: 'Heritage',
     tag: 'Bold & Classic',
-    url: 'http://localhost:5173',
+    url: '../hipac-foods',
     port: 5173,
     accent: '#b83225',
     desc: 'A rich, dark editorial design with full-bleed imagery, animated ingredient ticker, and deep brand storytelling. Leads with Farmer\'s Choice and anchors HIPAC\'s 45-year heritage.',
@@ -18,7 +18,7 @@ const CONCEPTS = [
     label: 'Concept B',
     name: 'Caribbean Themes',
     tag: 'Multi-Theme Dynamic',
-    url: 'http://localhost:5176',
+    url: '../hipac-foods-concept-3',
     port: 5176,
     accent: '#f49e1b',
     desc: 'A dynamic design with three switchable colour themes — Sand, Breeze & Farm Fresh. Showcases all three HIPAC brands in rotating hero slides with an immersive 3D brand showcase.',
@@ -29,7 +29,7 @@ const CONCEPTS = [
     label: 'Concept C',
     name: 'Split Vision',
     tag: 'Modern & Energetic',
-    url: 'http://localhost:5174',
+    url: '../hipac-foods-concept5',
     port: 5174,
     accent: '#0d2b5e',
     desc: 'A striking split-colour hero with a full-bleed background video. Navy meets amber in a bold diagonal divide, with floating brand logos and a punchy product spotlight section.',
@@ -40,7 +40,7 @@ const CONCEPTS = [
     label: 'Concept D',
     name: 'Engage',
     tag: 'Fun & Interactive',
-    url: 'http://localhost:5175',
+    url: '../hipac-foods-concept6',
     port: 5175,
     accent: '#1f4d2a',
     desc: 'The most interactive direction — brand wall panels, a 360° spinning product card poll, recipe rail, community quote slab, and animated brand sections that reward exploration.',
@@ -62,7 +62,7 @@ function LivePreview({ concept, active }) {
         <span className="p-dot" style={{ background: '#ff5f57' }} />
         <span className="p-dot" style={{ background: '#febc2e' }} />
         <span className="p-dot" style={{ background: '#28c840' }} />
-        <div className="p-addr">localhost:{concept.port}</div>
+        <div className="p-addr">{concept.url}</div>
       </div>
       {/* Scaled iframe */}
       <div className="preview-viewport" style={{ height: PREVIEW_H }}>

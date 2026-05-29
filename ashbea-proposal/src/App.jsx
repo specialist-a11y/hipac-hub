@@ -18,7 +18,7 @@ const CONCEPTS = [
     label: 'Concept B',
     name: 'Caribbean Themes',
     tag: 'Multi-Theme Dynamic',
-    url: '/hipac-foods-concept-3/',
+    url: '/hipac-foods-theme-2/',
     port: 5176,
     accent: '#f49e1b',
     desc: 'A dynamic design with three switchable colour themes — Sand, Breeze & Farm Fresh. Showcases all three HIPAC brands in rotating hero slides with an immersive 3D brand showcase.',
